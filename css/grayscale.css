@@ -303,3 +303,7 @@ a:focus, a:hover {
 footer {
   padding: 5rem 0;
 }
+
+#twitterFeed * {
+  font-family: "Lato" !important;
+  }
