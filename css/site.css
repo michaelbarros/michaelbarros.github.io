@@ -77,6 +77,11 @@ h6 {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
+/* Maintain tonal rhythm when optional middle sections are removed. */
+#pillars + #funding {
+  background: var(--bg-body);
+}
+
 .section-title {
   font-size: 2.5rem;
   font-weight: 600;
@@ -549,6 +554,11 @@ h6 {
 .papers-section {
   background: var(--bg-surface);
   padding: 5rem 0;
+}
+
+.news-section + .papers-section {
+  background: var(--bg-body);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
 .paper-card {
