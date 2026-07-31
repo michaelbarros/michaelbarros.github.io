@@ -217,6 +217,38 @@ h6 {
   margin-bottom: 1.5rem;
 }
 
+.hero-role {
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.hero-programme {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.35;
+  color: var(--color-accent-soft);
+  margin-bottom: 1.25rem;
+}
+
+.hero-quicklinks {
+  font-size: 0.95rem;
+}
+
+.profile-metric-line {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+}
+
+.profile-metric-note {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-muted);
+  opacity: 0.7;
+  margin-top: 0.25rem;
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
@@ -576,6 +608,83 @@ h6 {
 .research-section {
   background: var(--bg-body);
   padding: 5rem 0 4rem;
+}
+
+.subarea-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0 0;
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.subarea-list li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.45rem;
+}
+
+.subarea-list li:last-child {
+  margin-bottom: 0;
+}
+
+.subarea-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.programme-diagram {
+  margin-top: 3rem;
+}
+
+.diagram-node {
+  background: var(--bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 1.5rem 1.25rem;
+  height: 100%;
+}
+
+.diagram-node h4 {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.diagram-node p {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+  margin-bottom: 0;
+}
+
+.diagram-arrow {
+  text-align: center;
+  font-size: 1.75rem;
+  color: var(--color-accent);
+  line-height: 1;
+  margin: 0.75rem 0;
+}
+
+.diagram-destination {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+  background: var(--bg-surface);
+  border: 1.5px solid var(--color-accent);
+  border-radius: 16px;
+  padding: 1rem 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: var(--color-accent-soft);
 }
 
 .research-item {
