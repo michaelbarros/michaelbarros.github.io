@@ -28,7 +28,7 @@
 
   </head>
 
-  <body id="page-top">
+  <body id="page-top" class="research-page">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -48,7 +48,7 @@
               <a class="nav-link" href="index.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="research.html">Research</a>
+              <a class="nav-link active" href="research.html" aria-current="page">Research</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="https://www.essex.ac.uk/departments/computer-science-and-electronic-engineering/research/communications-and-networks/unconventional-communications-and-computing-laboratory">UC2 Lab</a>
@@ -71,7 +71,7 @@
           <span class="hero-eyebrow d-inline-block mb-3">Improving health. Reinventing computing.</span>
           <h1 class="hero-title">Biology processes information. We still cannot predict or control it.</h1>
           <p class="hero-lead">Disease and treatment response do not arise from molecules alone. They emerge from how signals are transmitted, integrated and stored across interacting cells and networks, and from how those dynamics change with biological state, context and history.</p>
-          <p class="hero-lead mb-0">Precision medicine therefore requires more than biomarkers. It must predict how a living system transforms a drug, stimulus or environmental change into a functional response. Our research makes biological information processing measurable, computable and engineerable, creating routes to better models of neurological dysfunction, more precise interventions and new forms of adaptive computation.</p>
+          <p class="hero-lead mb-0">Precision medicine therefore requires models that predict how living systems transform drugs, stimuli and environmental changes into functional responses. We combine mechanistic modelling, biofabrication, electrophysiology and adaptive interfaces to make this transformation measurable and predictable, and to test how it can be controlled across scales.</p>
           <div class="hero-actions justify-content-center mt-4">
             <a class="btn btn-accent" href="#architecture">Our approach</a>
             <a class="btn btn-outline-light" href="#funding">Funded Research</a>
@@ -79,6 +79,18 @@
         </div>
       </div>
     </header>
+
+    <!-- <nav class="research-subnav" aria-label="Research page sections">
+      <div class="container">
+        <div class="research-subnav-inner">
+          <a href="#architecture">Approach</a>
+          <a href="#societal-relevance">Implications</a>
+          <a href="#funding">Funding</a>
+          <a href="#environment">Laboratory</a>
+          <a href="#collaboration">Collaborate</a>
+        </div>
+      </div>
+    </nav> -->
 
     <!-- ============  Research Architecture: Discover / Engineer / Couple  ============ -->
     <section class="section" id="architecture">
@@ -94,15 +106,19 @@
           </div>
         </div>
         <div class="theme-tabs" data-component="theme-tabs">
-          <div class="theme-buttons">
-            <button class="theme-btn active" data-theme="discover">Discover</button>
-            <button class="theme-btn" data-theme="engineer">Engineer</button>
-            <button class="theme-btn" data-theme="couple">Couple</button>
+          <div class="theme-buttons" role="tablist" aria-label="Research programme">
+            <button class="theme-btn active" id="theme-tab-discover" type="button" role="tab"
+              aria-selected="true" aria-controls="theme-panel-discover" data-theme="discover">Discover</button>
+            <button class="theme-btn" id="theme-tab-engineer" type="button" role="tab" tabindex="-1"
+              aria-selected="false" aria-controls="theme-panel-engineer" data-theme="engineer">Engineer</button>
+            <button class="theme-btn" id="theme-tab-couple" type="button" role="tab" tabindex="-1"
+              aria-selected="false" aria-controls="theme-panel-couple" data-theme="couple">Couple</button>
           </div>
           <div class="theme-panels">
 
             <!-- Discover -->
-            <article class="theme-panel active" data-theme-panel="discover">
+            <article class="theme-panel active" id="theme-panel-discover" role="tabpanel" tabindex="0"
+              aria-labelledby="theme-tab-discover" aria-hidden="false" data-theme-panel="discover">
               <div class="panel-body">
                 <h3>Discover</h3>
                 <p>We determine how calcium signalling, neuron&ndash;astrocyte interactions, neuronal activity and network topology represent, transmit and transform information. This reveals how computation emerges across molecular, cellular and network scales, and how disease disrupts it.</p>
@@ -156,7 +172,8 @@
             </article>
 
             <!-- Engineer -->
-            <article class="theme-panel" data-theme-panel="engineer">
+            <article class="theme-panel" id="theme-panel-engineer" role="tabpanel" tabindex="0"
+              aria-labelledby="theme-tab-engineer" aria-hidden="true" data-theme-panel="engineer">
               <div class="panel-body">
                 <h3>Engineer</h3>
                 <p>We control cellular composition, connectivity, topology and stimulation to test how living neural networks generate specified functions. Current work connects computational models of neuronal logic, memory, reservoir dynamics and topology-dependent computation with biofabricated cultures, organoids and MEA-based biological testing. Neuronal gates and sequential circuits have so far been demonstrated computationally.</p>
@@ -217,7 +234,8 @@
             </article>
 
             <!-- Couple -->
-            <article class="theme-panel" data-theme-panel="couple">
+            <article class="theme-panel" id="theme-panel-couple" role="tabpanel" tabindex="0"
+              aria-labelledby="theme-tab-couple" aria-hidden="true" data-theme-panel="couple">
               <div class="panel-body">
                 <h3>Couple</h3>
                 <p>We couple living networks to bioelectronic interfaces, mechanistic models, AI and biological digital twins. These systems measure and stimulate biological activity, represent its internal state and test whether response can be predicted and controlled across cultures, architectures and interventions.</p>
@@ -330,8 +348,10 @@
 
         <h3 class="mb-3">Current awards</h3>
         <div class="content-card mb-5">
+          <p class="table-scroll-hint" aria-hidden="true">Swipe horizontally to view the complete table.</p>
           <div class="table-responsive">
             <table class="data-table">
+              <caption class="sr-only">Current funded research awards</caption>
               <thead>
                 <tr>
                   <th scope="col">Role</th>
@@ -377,8 +397,10 @@
 
         <h3 class="mb-3">Previous awards</h3>
         <div class="content-card">
+          <p class="table-scroll-hint" aria-hidden="true">Swipe horizontally to view the complete table.</p>
           <div class="table-responsive">
             <table class="data-table">
+              <caption class="sr-only">Previous funded research awards</caption>
               <thead>
                 <tr>
                   <th scope="col">Role</th>
@@ -573,6 +595,49 @@
     <!-- Custom scripts -->
     <script src="js/grayscale.min.js"></script>
     <script src="js/site.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('[data-component="theme-tabs"]').forEach(function (component) {
+          var tabs = Array.from(component.querySelectorAll('[role="tab"]'));
+          var panels = Array.from(component.querySelectorAll('[role="tabpanel"]'));
+
+          function activateTab(tab) {
+            tabs.forEach(function (candidate) {
+              var selected = candidate === tab;
+              candidate.classList.toggle('active', selected);
+              candidate.setAttribute('aria-selected', String(selected));
+              candidate.setAttribute('tabindex', selected ? '0' : '-1');
+            });
+
+            panels.forEach(function (panel) {
+              var selected = panel.id === tab.getAttribute('aria-controls');
+              panel.classList.toggle('active', selected);
+              panel.setAttribute('aria-hidden', String(!selected));
+            });
+          }
+
+          tabs.forEach(function (tab, index) {
+            tab.addEventListener('click', function () {
+              activateTab(tab);
+            });
+
+            tab.addEventListener('keydown', function (event) {
+              var nextIndex = null;
+              if (event.key === 'ArrowRight') nextIndex = (index + 1) % tabs.length;
+              if (event.key === 'ArrowLeft') nextIndex = (index - 1 + tabs.length) % tabs.length;
+              if (event.key === 'Home') nextIndex = 0;
+              if (event.key === 'End') nextIndex = tabs.length - 1;
+              if (nextIndex === null) return;
+
+              event.preventDefault();
+              activateTab(tabs[nextIndex]);
+              tabs[nextIndex].focus();
+            });
+          });
+        });
+      });
+    </script>
 
   </body>
 
